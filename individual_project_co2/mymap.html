@@ -1,0 +1,69 @@
+<html>
+  <head>
+    <script src="https://api.mqcdn.com/sdk/mapquest-js/v1.3.2/mapquest.js"></script>
+    <link type="text/css" rel="stylesheet" href="https://api.mqcdn.com/sdk/mapquest-js/v1.3.2/mapquest.css"/>
+
+    <script type="text/javascript">
+      window.onload = function() {
+        L.mapquest.key = 'LAK9khflgkYGJ5WB8gRM8tTJtMysqTlo';
+
+        var map = L.mapquest.map('map', {
+          center: [37.382690, -122.097232],
+          layers: L.mapquest.tileLayer('map'),
+          zoom: 11
+        });
+
+        L.circle([37.382690, -122.097232], { radius: 14000 }).addTo(map);
+  L.marker([37.2796, -122.07358], {
+        icon: L.mapquest.icons.marker({primaryColor: '#FA8072', secondaryColor: '#FA8072', size: 'md', symbol: '2'}),
+        draggable: false
+      }).bindPopup('Deep in the mountains').addTo(map);
+
+      L.marker([37.30635, -122.074643], {
+        icon: L.mapquest.icons.marker({primaryColor: '#E9967A', secondaryColor: '#E9967A', size: 'md', symbol: '3'}),
+        draggable: false
+      }).bindPopup('In the mountains, close to roads').addTo(map);
+
+      L.marker([37.359678, -122.042752], {
+        icon: L.mapquest.icons.marker({primaryColor: '#CD5C5C', secondaryColor: '#CD5C5C', size: 'md', symbol: '5'}),
+        draggable: false
+      }).bindPopup('721 West Remington Drive').addTo(map);
+
+      L.marker([37.310732, -122.068313], {
+        icon: L.mapquest.icons.marker({primaryColor: '#FFA07A', secondaryColor: '#FFA07A', size: 'md', symbol: '1'}),
+        draggable: false
+      }).bindPopup('22424 Riverside Drive').addTo(map);
+
+      L.marker([37.453212, -122.191202], {
+        icon: L.mapquest.icons.marker({primaryColor: '#FF0000', secondaryColor: '#FF0000', size: 'md', symbol: '8'}),
+        draggable: false
+      }).bindPopup('Menlo School').addTo(map);
+
+      L.marker([37.33134, -122.032014], {
+        icon: L.mapquest.icons.marker({primaryColor: '#F08080', secondaryColor: '#F08080', size: 'md', symbol: '4'}),
+        draggable: false
+      }).bindPopup('BJ bus stop').addTo(map);
+
+      L.marker([37.323024, -122.043139], {
+        icon: L.mapquest.icons.marker({primaryColor: '#B22222', secondaryColor: '#B22222', size: 'md', symbol: '7'}),
+        draggable: false
+      }).bindPopup('Cupertino sports center').addTo(map);
+
+      L.marker([37.353207, -122.033027], {
+        icon: L.mapquest.icons.marker({primaryColor: '#DC143C', secondaryColor: '#DC143C', size: 'md', symbol: '6'}),
+        draggable: false
+      }).bindPopup('Fremont high school').addTo(map);
+
+      L.marker([37.337291, -122.049752], {
+        icon: L.mapquest.icons.marker({primaryColor: '#8B0000', secondaryColor: '#8B0000', size: 'md', symbol: '9'}),
+        draggable: false
+      }).bindPopup('Homestead high school').addTo(map);
+
+            };
+    </script>
+  </head>
+
+  <body style="border: 0; margin: 0;">
+    <div id="map" style="width: 100%; height: 1000px;"></div>
+  </body>
+</html>
